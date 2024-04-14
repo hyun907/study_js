@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연도를 입력 받아 띠 출력하는 프로그램</title>
+    <!-- 
+        태어난 연도를 12로 나누었을 때 나머지가 0, 1, 2... 11일 때 원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양
+     -->
+    <script>
+        const rawInput = prompt("태어난 해를 입력해주세요.", "")
+        const year = Number(rawInput)
+        const tti = "원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양".split(", ") // , 로 잘랐으므로 개별 배열이 만들어진다.
+
+        alert(`${year}년에 태어났다면 ${tti[year % 12]} 띠 입니다.`)
+    </script>
+</head>
+<body>
+</body>
+</html>
