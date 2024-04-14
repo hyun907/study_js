@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연도를 입력 받아 띠 출력하는 프로그램 - 한자로 변경하기</title>
+    <!-- 
+        태어난 연도를 12로 나누었을 때 나머지가 0, 1, 2... 11일 때 원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양
+
+        쥐부터
+        자,축,인,묘,진,사,오,미,신,유,술,해
+
+        연도를 10으로 나눈 나머지가 0, 1, 2... 9일 때
+        경,신,임,계,갑,을,병,정
+     -->
+    <script>
+        const rawInput = prompt("태어난 해를 입력해주세요.", "")
+        const year = Number(rawInput)
+
+        let 간
+        const tenY = "경,신,임,계,갑,을,병,정".split(",")
+        간 = tenY[year % 10]
+        
+
+        let 띠
+        const tti = "신,유,술,해,자,축,인,묘,진,사,오,미".split(",")
+        띠 = tti[year % 12]
+
+        alert(`${year}년은 ${간}${띠} 년입니다.`)
+    </script>
+</head>
+<body>
+</body>
+</html>
